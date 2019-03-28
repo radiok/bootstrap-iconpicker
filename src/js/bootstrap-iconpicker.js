@@ -237,7 +237,7 @@
                     var v = op.iconClassFix + op.icons[pos];
                     btn.val(v).attr('title', v).append('<i class="' + op.iconClass + ' ' + v + '"></i>').show();
                     if (op.icon === v) {
-                        btn.addClass(op.selectedClass).addClass('btn-icon-selected');
+                        btn.removeClass(op.unselectedClass).addClass(op.selectedClass).addClass('btn-icon-selected');
                     }
                 }
                 tr.append($('<td></td>').append(btn));
